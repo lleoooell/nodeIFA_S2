@@ -1,0 +1,168 @@
+[{
+      "Nom": "Olifertchouk",
+      "Prenom": "Cindy",
+      "Javascript": "Un peu",
+      "site_pref": "openclassroom",
+      "Pourquoi_S": "complet",
+      "app_pref": "Netflix",
+      "Pourquoi_A": "chill",
+      "before_IFA": "Fac de langues",
+      "pourquoi_IFA": "reconversion",
+      "Mail": "Cindy.olifertchouk@hotmail.fr",
+      "ID": 0
+   },
+   {
+      "Nom": "Barreirinho",
+      "Prenom": "Alexis",
+      "Javascript": "Non",
+      "site_pref": "Dealabs",
+      "Pourquoi_S": "Site de bon plan",
+      "app_pref": "Spotify",
+      "Pourquoi_A": "toute ma musique",
+      "before_IFA": "Master Marketing Digital",
+      "pourquoi_IFA": "Approfondir mes connaissances en programmation",
+      "Mail": "alexis@barreirinho.com",
+      "ID": 10
+
+   },
+   {
+      "Nom": "lattreche",
+      "Prenom": "maxime",
+      "Javascript": "Non",
+      "site_pref": "dealabs",
+      "Pourquoi_S": "simple et efficace",
+      "app_pref": "waze",
+      "Pourquoi_A": "google map avec une notion de social ( info bouchon , radar etc)",
+      "before_IFA": "agent  helpdesk CTG",
+      "pourquoi_IFA": "consolider mes connaissances + avoir de l'experience",
+      "Mail": "maximelattreche@gmail.com",
+      "ID": 20
+
+   },
+   {
+      "Nom": "Haraux",
+      "Prenom": "Michael",
+      "Javascript": "Déjà pratiqué / Débutant",
+      "site_pref": "Openclassroom",
+      "Pourquoi_S": " Claire et précis",
+      "app_pref": "Messenger",
+      "Pourquoi_A": "Pour garder le contact",
+      "before_IFA": "Recherche d’emploi dans le développement",
+      "pourquoi_IFA": "Remise à niveau / Contrat",
+      "Mail": "michaelharaux@gmail.com",
+      "ID": 30
+
+   },
+   {
+      "Nom": "Mass",
+      "Prenom": "julien",
+      "Javascript": "Oui",
+      "site_pref": "9gag",
+      "Pourquoi_S": "Pour procrastiner",
+      "app_pref": "MangaRock",
+      "Pourquoi_A": "Pouvoir lire des mangas où je veux et il est bien fait",
+      "before_IFA": "DUT INFO/ Baccalaureat informatique(Quebec)",
+      "pourquoi_IFA": "Pour avoir une expérience et promesse d’embauche",
+      "Mail": "massj.info@gmail.com",
+      "ID": 40
+
+   },
+   {
+      "Nom": "DI TERLIZZI",
+      "Prenom": "Florian",
+      "Javascript": "Non",
+      "site_pref": "Jeuxvideo.com",
+      "Pourquoi_S": "Car j’aime me  tenir informer des news",
+      "app_pref": "Sonic 2",
+      "Pourquoi_A": "Passer le temps dans les transports en commun",
+      "before_IFA": "Formation CNAM",
+      "pourquoi_IFA": "Car Stage et promesse d’embauche",
+      "Mail": "florian.diterlizzi@laposte.net",
+      "ID": 50
+
+   },
+   {
+      "Nom": "Trotzier",
+      "Prenom": "Philippe",
+      "Javascript": "OUI",
+      "site_pref": "philippe.trotzier.net",
+      "Pourquoi_S": "parce que c'est moi qui l'ai fait",
+      "app_pref": "Diskord",
+      "Pourquoi_A": "parce que",
+      "before_IFA": "dev",
+      "pourquoi_IFA": "requalification",
+      "Mail": "philippe@trotzier.net",
+      "ID": 60
+
+   },
+   {
+      "Nom": "Pfister",
+      "Prenom": "Cécile",
+      "Javascript": "Non",
+      "site_pref": "lebusmagique.fr",
+      "Pourquoi_S": "Bible de GW2",
+      "app_pref": "YouTube",
+      "Pourquoi_A": "J’aime zapper !",
+      "before_IFA": "J’étais en formation développeur logiciel à l’AFPA",
+      "pourquoi_IFA": "Pour acquérir des compétences et m’améliorer",
+      "Mail": "cecile.pfister@live.fr",
+      "ID": 70
+
+   },
+   {
+      "Nom": "Nyazi",
+      "Prenom": " Taj",
+      "Javascript": " Un peu",
+      "site_pref": " www.tajweb.fr",
+      "Pourquoi_S": " j'ai besoin",
+      "app_pref": " Blender",
+      "Pourquoi_A": "j'aime bien",
+      "before_IFA": " Apprendre et C",
+      "pourquoi_IFA": " Expercience",
+      "Mail": "nyazitaj@yahoo.fr",
+      "ID": 80
+
+   },
+   {
+      "Nom": "ciano",
+      "Prenom": "enzo",
+      "Javascript": "OUI",
+      "site_pref": "Jacquie&Michel",
+      "Pourquoi_S": "Vidéo interessante",
+      "app_pref": "Slack",
+      "Pourquoi_A": "Belle plateforme",
+      "before_IFA": "Mission intérim",
+      "pourquoi_IFA": "J'aime la vie",
+      "Mail": "enzociano57@gmail.com",
+      "ID": 90
+
+   },
+   {
+      "Nom": "Vitaliya",
+      "Prenom": "Alisauskaite",
+      "Javascript": "Oui",
+      "site_pref": "www.google.com",
+      "Pourquoi_S": "je le utilise beaucoup",
+      "app_pref": "je nâ€™ai pas",
+      "Pourquoi_A": "Ã§a dÃ©pend en projet actuel",
+      "before_IFA": "",
+      "pourquoi_IFA": "bon programme de formation pour developpement web",
+      "Mail": "vitalija.alisauskaite@gmail.com",
+      "ID": 100
+
+   },
+   {
+      "Nom": "RAHMANI",
+      "Prenom": "Bryan",
+      "Javascript": "Oui",
+      "site_pref": "Pinterest",
+      "Pourquoi_S": "Cultiver la créativité",
+      "app_pref": "Facebook",
+      "Pourquoi_A": "Côté Social",
+      "before_IFA": "Entrepreneur",
+      "pourquoi_IFA": "Validation des acquis",
+      "Mail": "brahmani57@icloud.com",
+      "ID": 110
+
+   }
+]
