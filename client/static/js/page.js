@@ -1,5 +1,6 @@
-console.log('from client page2');
+// je récupère les valeurs en paramètres dans l'url
 var url = new URLSearchParams(document.location.search.substring(1));
+// mon user id:
 var userId = url.get("id"); 
 
 // function populateList(collectionString){
@@ -13,8 +14,10 @@ var userId = url.get("id");
 // 	})
 // }
 
+// je crée une nouvelle requette HTTP pour récuperer les infos de mon objet
 var xhttp = new XMLHttpRequest();
 
+// je passe l'id en paramètre
 xhttp.open("GET", "http://localhost:3001/liste/" + userId, true);
 
 xhttp.send();
@@ -30,13 +33,12 @@ xhttp.onreadystatechange = function() {
 
 
     if (this.readyState == 4 && this.status == 200) {
-       // Typical action to be performed when the document is ready:
-       console.log("requete OK");
        document.getElementById("bindUser").innerHTML = this.responseText;
+       // je parse ma responseText en json pour pouvoir la manipuler
        var responseJson = JSON.parse(this.responseText);
+       // je bind les infos de mon json dans ma vue
        document.getElementById("nom").innerHTML = responseJson.Nom;
        document.getElementById("prenom").innerHTML = responseJson.Prenom;
-       // populateList(this.responseText);
     }
 };
 

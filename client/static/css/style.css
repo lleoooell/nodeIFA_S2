@@ -1,3 +1,24 @@
 .red{
 	color:red;
 }
+.edit{
+	color: blue;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.delete{
+	color: red;
+	margin-left: 10px;
+	cursor: pointer;
+}
+#form-id{
+	display: flex;
+	flex-direction: column;
+
+}
+input{
+	height: 30px;
+}
+label{
+	margin-top: 10px;
+}
