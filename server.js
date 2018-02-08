@@ -100,18 +100,18 @@ app.post('/liste/', function(req, res) {
     });
 
 });
+
 // je post les infos d'un user dans le body avec en param, l'id a modifier, mon serveur fait le reste
 app.post('/liste/:id', function(req, res) {
 
     // console.log(req.body);
     // var newEleve = new Eleve(req.body);
-
     Eleve.update({
         _id: req.params.id
-    }, req.body, {}, function(err, raw) {
+    }, req.body, {}, function(err, objedite) {
         if (err) return handleError(err);
-        console.log('The raw response from Mongo was ', raw);
-        res.json(raw);
+        console.log('The objedite response from Mongo was ', objedite);
+        res.json(objedite);
     });
 
 });
