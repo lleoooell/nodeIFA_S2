@@ -16,6 +16,9 @@ function deleteUser(id) {
                 // je résout ma promesse, the peux la récupérer dans le callback de mon then
                 resolve(this.responseText);
             }
+            if(this.status == 500){
+            	reject({"msg" : 'problème serveur', "code" : 102});
+            }
         };
     });
 
