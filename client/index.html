@@ -4,6 +4,7 @@
 	<title>test node</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
 </head>
 <body>
 		<a href="/new"> + Ajouter</a>
@@ -13,5 +14,13 @@
 <ul id="maListe"></ul>
 
 <script type="text/javascript" src="assets/js/client.js"></script>
+<script type="text/javascript">
+	 var socket = io();
+
+	 socket.emit('hello', {"salut" : "toi"});
+	 socket.on("hellofromserver",function(msg){
+	 	console.log(msg);
+	 })
+</script>
 </body>
 </html>
