@@ -12,15 +12,10 @@
 <!-- <p class="red">Hello World!!!!!!</p> -->
 <!-- <p id="demo">Hello World!!!!!!</p> -->
 <ul id="maListe"></ul>
-
-<script type="text/javascript" src="assets/js/client.js"></script>
 <script type="text/javascript">
-	 var socket = io();
-
-	 socket.emit('hello', {"salut" : "toi"});
-	 socket.on("hellofromserver",function(msg){
-	 	console.log(msg);
-	 })
+	const socket = io();
 </script>
+<script type="text/javascript" src="assets/js/client.js"></script>
+
 </body>
 </html>

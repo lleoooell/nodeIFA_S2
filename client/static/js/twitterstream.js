@@ -1,7 +1,17 @@
 console.log("twitter page");
 
 var socket = io();
+socket.on("newEleve", function(msg) {
+    console.log(msg);
+    // addItemToList(msg);
 
+});
+socket.on("liste", function(msg) {
+    console.log("get list socket");
+    console.log(msg);
+    // addItemToList(msg);
+
+});
 function convertTime(timestamp){
 	moment.locale('fr');
 	return moment(timestamp,'x').fromNow();

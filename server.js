@@ -10,14 +10,14 @@ var mongoose = require('mongoose');
 var ZoneTelechargement = require('zone-telechargement');
 const Eleve = require("./models/eleve.model");
 var Twit = require('twit');
-
+const CONFIG = require("./config");
 
 
 var T = new Twit({
-  consumer_key:         'cwp0ifDWfOJYKbJWcjSxTW9M7',
-  consumer_secret:      'ev54lljDDar3n9QuA8E3pOHHppcUpIbNXt2CQ3rwlGnJV3NIRH',
-  access_token:         '3341047145-C0UZ7wWTQlJqQQogZSWp5aKeDekWYEmpS5UAptF',
-  access_token_secret:  'zs2ER8NbcKKosw3nnHOH7VBQEj1d3dfLO3lCnkSXupVIa',
+  consumer_key:         CONFIG.consumer_key,
+  consumer_secret:      CONFIG.consumer_secret,
+  access_token:         CONFIG.access_token,
+  access_token_secret:  CONFIG.access_token_secret,
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests. 
 })
 
@@ -28,6 +28,21 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+io.on('connection', function(socket) {
+    // console.log(socket);
+    console.log('a user connected');
+    socket.on('disconnect', function() {
+        console.log('user disconnected');
+    });
+    socket.on('hello', function(msg) {
+        console.log(msg);
+        console.log(msg.salut);
+        console.log('a user say hello');
+
+    });
+    socket.emit('hellofromserver', 'world');
+
+});
 // je connecte ma base de données (prérequis)
 mongoose.connect('mongodb://localhost:27017/testIFA2');
 
@@ -98,7 +113,7 @@ app.get('/liste/', function(req, res) {
             console.log(err);
             return res.sendStatus(500);
         } else {
-
+             io.emit("liste", docs);
             return res.json(docs);
 
         }
@@ -116,6 +131,8 @@ app.post('/liste/', function(req, res) {
             return console.log(err);
         } else {
             console.log(success);
+            io.emit("newEleve", success);
+
             res.send(success);
 
         }
@@ -128,11 +145,12 @@ app.post('/liste/:id', function(req, res) {
 
     // console.log(req.body);
     // var newEleve = new Eleve(req.body);
-    Eleve.update({
+    Eleve.findOneAndUpdate({
         _id: req.params.id
-    }, req.body, {}, function(err, objedite) {
+    }, req.body, { new: true }, function(err, objedite) {
         if (err) return handleError(err);
         console.log('The objedite response from Mongo was ', objedite);
+        io.emit("updateUser", objedite);
         res.json(objedite);
     });
 
@@ -144,6 +162,7 @@ app.delete('/liste/:id', function(req, res) {
             message: "User successfully deleted",
             id: todo._id
         };
+        io.emit("deleteUser", response);
         res.status(200).send(response);
     });
 });
@@ -192,21 +211,6 @@ app.post('/detail/', function(req, res) {
 //       // return res.send(data);
 // });
 
-io.on('connection', function(socket) {
-    // console.log(socket);
-    console.log('a user connected');
-    socket.on('disconnect', function() {
-        console.log('user disconnected');
-    });
-    socket.on('hello', function(msg) {
-        console.log(msg);
-        console.log(msg.salut);
-        console.log('a user say hello');
-
-    });
-    socket.emit('hellofromserver', 'world');
-
-});
 
 
 var stream = T.stream('statuses/filter', { track: 'javascript' })
